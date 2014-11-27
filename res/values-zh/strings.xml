@@ -16,14 +16,14 @@
  -->
 
 <resources>        
-    <string name="ApplicationName">Zirco Browser</string>
-    <string name="ApplicationNameUrl">Zirco Browser - %s</string>
-    <string name="ApplicationDescription">使用Zirco Browser让你更好的使用互联网</string>
+    <string name="ApplicationName">Geek Browser</string>
+    <string name="ApplicationNameUrl">Geek Browser - %s</string>
+    <string name="ApplicationDescription">使用Geek Browser让你更好的使用互联网</string>
     
     <string name="AboutActivity.Title">关于</string>
     <string name="AboutActivity.VersionText">Version:</string>
 	<string name="AboutActivity.LicenseText">版权:</string>
-	<string name="AboutActivity.UrlTextValue">http://code.google.com/p/zirco-browser/</string>
+	<string name="AboutActivity.UrlTextValue">https://github.com/gengqifu/geek-browser</string>
 	<string name="AboutActivity.LicenseTextValue">GPL v3</string>
 
     <string name="Main.MenuAddBookmark">添加书签</string>
