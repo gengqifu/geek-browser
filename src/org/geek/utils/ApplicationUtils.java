@@ -40,7 +40,6 @@ import android.os.Message;
 import android.preference.PreferenceManager;
 import android.text.ClipboardManager;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.widget.Toast;
 
 import java.util.concurrent.Callable;
