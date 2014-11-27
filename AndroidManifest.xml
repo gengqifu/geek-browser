@@ -49,7 +49,7 @@
 		<activity android:name=".ui.activities.AdBlockerWhiteListActivity"></activity>
 		<activity android:name=".ui.activities.BookmarksHistoryActivity" android:configChanges="keyboardHidden|orientation"></activity>
 		<activity android:name=".ui.activities.ChangelogActivity" android:theme="@android:style/Theme.Dialog" android:label="@string/ChangelogActivity.Title"></activity>
-		<activity android:name=".ui.activities.preferences.PreferencesActivityity"></activity>
+		<activity android:name=".ui.activities.preferences.PreferencesActivity"></activity>
 		<activity android:name=".ui.activities.preferences.HomepagePreferenceActivity" android:theme="@android:style/Theme.Dialog" android:label="@string/HomepagePreferenceActivity.Title"></activity>
 		<activity android:name=".ui.activities.preferences.SearchUrlPreferenceActivity" android:theme="@android:style/Theme.Dialog" android:label="@string/SearchUrlPreferenceActivity.Title"></activity>
 		<activity android:name=".ui.activities.preferences.UserAgentPreferenceActivity" android:theme="@android:style/Theme.Dialog" android:label="@string/UserAgentPreferenceActivity.Title"></activity>
