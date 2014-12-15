@@ -120,10 +120,11 @@ public class MainActivity extends Activity implements IToolbarsContainer, OnTouc
 	private static final int FLIP_TIME_THRESHOLD = 400;
 	
 	private static final int MENU_ADD_BOOKMARK = Menu.FIRST;
-	private static final int MENU_SHOW_BOOKMARKS = Menu.FIRST + 1;
-	private static final int MENU_SHOW_DOWNLOADS = Menu.FIRST + 2;	
-	private static final int MENU_PREFERENCES = Menu.FIRST + 3;
-	private static final int MENU_EXIT = Menu.FIRST + 4;	
+	private static final int MENU_SHARE_URL = Menu.FIRST + 1;
+	private static final int MENU_SHOW_BOOKMARKS = Menu.FIRST + 2;
+	private static final int MENU_SHOW_DOWNLOADS = Menu.FIRST + 3;	
+	private static final int MENU_PREFERENCES = Menu.FIRST + 4;
+	private static final int MENU_EXIT = Menu.FIRST + 5;	
 	
 	private static final int CONTEXT_MENU_OPEN = Menu.FIRST + 10;
 	private static final int CONTEXT_MENU_OPEN_IN_NEW_TAB = Menu.FIRST + 11;
@@ -1681,6 +1682,18 @@ public class MainActivity extends Activity implements IToolbarsContainer, OnTouc
 		startActivity(i);
 	}
 	
+	/*
+	 * Open "Share url" dialog
+	 */
+	private void openShareUrlDialog() {
+	    Intent intent=new Intent(Intent.ACTION_SEND);
+	    intent.setType("image/*");
+	    intent.putExtra(Intent.EXTRA_SUBJECT, "Share");
+	    intent.putExtra(Intent.EXTRA_TEXT, mCurrentWebView.getUrl());
+	    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	    startActivity(Intent.createChooser(intent, mCurrentWebView.getTitle()));
+	}
+	
 	/**
 	 * Open the bookmark list.
 	 */
@@ -1721,6 +1734,9 @@ public class MainActivity extends Activity implements IToolbarsContainer, OnTouc
     	item = menu.add(0, MENU_ADD_BOOKMARK, 0, R.string.Main_MenuAddBookmark);
         item.setIcon(R.drawable.ic_menu_add_bookmark);
         
+        item = menu.add(0, MENU_SHARE_URL, 0, R.string.Main_ShareUrl);
+        item.setIcon(R.drawable.ic_menu_share);
+        
         item = menu.add(0, MENU_SHOW_BOOKMARKS, 0, R.string.Main_MenuShowBookmarks);
         item.setIcon(R.drawable.ic_menu_bookmarks);
         
@@ -1742,6 +1758,9 @@ public class MainActivity extends Activity implements IToolbarsContainer, OnTouc
     	case MENU_ADD_BOOKMARK:    		
     		openAddBookmarkDialog();
             return true;
+    	case MENU_SHARE_URL:
+    	    openShareUrlDialog();
+    	    return true;
     	case MENU_SHOW_BOOKMARKS:    		
     		openBookmarksHistoryActivity();
             return true;
