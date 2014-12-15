@@ -22,7 +22,7 @@
     
     <string name="AboutActivity.Title">Acerca de</string>
 	<string name="AboutActivity.VersionText">Version:</string>
-	<string name="AboutActivity.UrlTextValue">http://code.google.com/p/zirco-browser/</string>
+	<string name="AboutActivity.UrlTextValue">https://github.com/gengqifu/geek-browser</string>
 	<string name="AboutActivity.LicenseText">Licencia:</string>
 	<string name="AboutActivity.LicenseTextValue">GPL v3</string>
 
