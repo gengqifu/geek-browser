@@ -540,7 +540,6 @@ public class ApplicationUtils {
 		result = String.format(mRawStartPageWeather,
 			mContext.getResources().getString(R.string.StartPage_Weather),
 			weatherSb.toString());
-		Log.d(TAG, "weather - " + result);
 	    } catch (JSONException e) {  
                 e.printStackTrace();  
             }
@@ -561,8 +560,7 @@ public class ApplicationUtils {
 	                //Intent intent = new Intent(RECI_COAST);  
 	                try {  
 	                    //获取服务器返回的信息  
-	                    result = getRequest("http://www.weather.com.cn/data/sk/101010100.html");  
-	                    Log.d(TAG,"2222222222222222222222 - " + result);
+	                    result = getRequest("http://www.weather.com.cn/data/sk/101010100.html");
 	                    Message weather =new Message();
 	                    weather.what = WEATHER;
 	                    weather.obj = result;
@@ -592,8 +590,6 @@ public class ApplicationUtils {
 	        //} catch (Exception e) {
 	            //e.printStackTrace();
 	        //}
-	    
-	        Log.d(TAG,"111111111111111111111111111111 - " + result);
 	    return result;
 	}
 	
@@ -650,8 +646,6 @@ public class ApplicationUtils {
 		
 		//getWeatherHtml(context);
 		String weatherHtml = getWeatherHtml(context);//mWeatherInfo;
-		Log.d(TAG, "mWeatherInfo - " +mWeatherInfo );
-		Log.d(TAG, "weatherHtml - " + weatherHtml);
 		String navigationHtml = getNavigationHtml(context);
 		String searchHtml = "";
 		if (PreferenceManager.getDefaultSharedPreferences(context).getBoolean(Constants.PREFERENCES_START_PAGE_SHOW_SEARCH, false)) {

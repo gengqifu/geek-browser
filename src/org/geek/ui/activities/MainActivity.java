@@ -69,7 +69,7 @@ import android.os.Message;
 import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
+//import android.util.Log;
 import android.view.ContextMenu;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
@@ -107,6 +107,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 import android.widget.SimpleCursorAdapter.CursorToStringConverter;
+
+import org.geek.utils.Log;
 
 /**
  * The application main activity.
@@ -1491,7 +1493,7 @@ public class MainActivity extends Activity implements IToolbarsContainer, OnTouc
 			} else if (mFindDialogVisible) {
 				closeFindDialog();
 			} else {
-				if (mCurrentWebView.canGoBack()) {
+				if (mCurrentWebView.canGoBack() && !mCurrentWebView.getUrl().equals("about:start")) {
 					mCurrentWebView.goBack();				
 				} else {
 					this.moveTaskToBack(true);
